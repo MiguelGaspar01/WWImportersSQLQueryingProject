@@ -9,4 +9,6 @@ The **Wide World Importers** dataset is a **sample database provided by Microsof
 - Explore **Specific Datetime functions, Joins, Common Table Expressions (CTEs), Aggregations and Window Functions**.  
 - Deliver well-structured, formatted data that can be leveraged by other departments for dashboard development and decision-making.
 
+## **Notes**
+Although the scripts used to create part of the schema are provided in this repository, in order to replicate the work done I recommend downloading the OLAP .bak file, from the referenced source, and recovering the database onto SQL Server. The schema provided here is solely for reference and to consider in order to understand the queries that were developed.
 ---
