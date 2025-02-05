@@ -38,7 +38,7 @@ WHERE s.[Stock Item Key] IS NULL AND si.[Stock Item Key] != 0
 ORDER BY [Stock Item Key];
 
 
---4.	Retrieve all orders that were placed on a Monday.
+--4.	What are the orders that were placed on a Monday?
 
 SELECT [Order Key], DATENAME(WEEKDAY, d.[Date]) AS [Weekday Name]
 FROM [Fact].[Order] o
@@ -46,7 +46,7 @@ JOIN [Dimension].[Date] d
 ON d.[Date] = o.[Order Date Key]
 WHERE DATENAME(WEEKDAY, d.[Date]) = 'Monday';
 
---5.	Find the total revenue (excluding tax) per year.
+--5.	What is the total revenue (excluding tax) per year?
 
 SELECT YEAR(f.[Invoice Date Key]) AS year_sales, SUM(f.[Total Excluding Tax]) AS total_revenue
 FROM [Fact].[Sale] f
@@ -99,7 +99,7 @@ ON o.[Order Date Key] = d.[Date]
 GROUP BY YEAR(d.[Date])
 ORDER BY YEAR(d.[Date]);
 
---9. Identify the most common payment method used for purchases.
+--9. What is the most common payment method used for purchases?
 
 SELECT [Payment Method], COUNT(*) count_of_payment_occurences
 FROM [Dimension].[Payment Method] pm
@@ -126,7 +126,7 @@ ON sa.[Stock Item Key] = ip.[Stock Item Key]
 GROUP BY ([Supplier Key])
 ORDER BY SUM(avg_price) DESC;
 
---11.	List all orders placed by customers located in a specific country.
+--11.	What do the orders that were placed by customers located in the United States look like?
 
 SELECT c.[Customer], o.[Order Key], ci.[Country], o.[Description], o.[Quantity]
 FROM [Dimension].[Customer] c
@@ -138,7 +138,7 @@ WHERE c.[Customer] != 'Unknown' AND ci.[Country] = 'United States'
 GROUP BY c.[Customer], ci.[Country], o.[Order Key], o.[Description], o.[Quantity]
 ORDER BY c.[Customer];
 
---12. 	Find the most frequently purchased product per customer
+--12. 	Whats the most purchased product per customer?
 
 WITH UniquePurchasedItems 
 AS
@@ -165,7 +165,7 @@ FROM CustomerOrdersConcluded cod
 WHERE rn = 1;
 
 
--- 13.	Identify the city that generates the highest sales revenue.
+-- 13.	Whats the city that generates the highest sales revenue?
 
 SELECT TOP 1 c.[City], SUM(sa.[Total Including Tax]) as sum_of_revenue
 FROM [Dimension].[City] c
