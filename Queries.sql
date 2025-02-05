@@ -14,6 +14,7 @@ ORDER BY year_date DESC;
 
 
 -- 2.	What are the top 10 customers with the highest total order value?
+
 WITH Customer_Expenses 
 AS
 (
@@ -36,7 +37,6 @@ LEFT JOIN [Fact].[Sale] S
 ON si.[Stock Item Key] = s.[Stock Item Key]
 WHERE s.[Stock Item Key] IS NULL AND si.[Stock Item Key] != 0
 ORDER BY [Stock Item Key];
-
 
 --4.	What are the orders that were placed on a Monday?
 
@@ -164,7 +164,6 @@ SELECT cod.[Customer Key], cod.[Stock Item], cod.purchase_count
 FROM CustomerOrdersConcluded cod
 WHERE rn = 1;
 
-
 -- 13.	Whats the city that generates the highest sales revenue?
 
 SELECT TOP 1 c.[City], SUM(sa.[Total Including Tax]) as sum_of_revenue
@@ -173,7 +172,6 @@ INNER JOIN [Fact].[Sale] sa
 ON c.[City Key] = sa.[City Key]
 GROUP BY c.[City]
 ORDER BY sum_of_revenue DESC;
-
 
 --14.  Which employees have processed the highest number of orders?
 
@@ -192,7 +190,6 @@ GROUP BY e.[Employee Key]
 SELECT * FROM EmployeeOrderCounts
 WHERE [Rank of Employee] < 6
 ORDER BY [Rank of Employee], [Nr of Orders] DESC;
-
 
 --15. What is the the percentage of stock items that were ordered more than once.
 
