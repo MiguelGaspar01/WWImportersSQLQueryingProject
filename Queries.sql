@@ -174,6 +174,7 @@ ON c.[City Key] = sa.[City Key]
 GROUP BY c.[City]
 ORDER BY sum_of_revenue DESC;
 
+
 --14.  Which employees have processed the highest number of orders?
 
 WITH EmployeeOrderCounts 
