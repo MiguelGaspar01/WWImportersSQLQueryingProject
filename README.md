@@ -6,7 +6,7 @@ The **Wide World Importers** dataset is a **sample database provided by Microsof
 
 ### **Key Objectives**  
 - Write **SQL queries** to analyze business performance and answer business questions across various contexts (dimensions).  
-- Explore the use of **Specific Datetime functions, Joins, Common Table Expressions (CTEs), Aggregations and Window Functions**.  
+- Explore the use of **Specific Datetime functions, Joins, Common Table Expressions (CTEs), Aggregations and Window Functions** to develop intricate SQL logic.  
 - Deliver well-structured, formatted data that can be leveraged by other departments for dashboard development and decision-making.
 
 ## **Notes**
