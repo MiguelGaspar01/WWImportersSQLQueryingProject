@@ -5,7 +5,7 @@ This repository contains SQL queries developed using the Wide World Importers (W
 The **Wide World Importers** dataset is a **sample database provided by Microsoft**, designed to mimic real-world transactional and analytical workloads. This project leverages **SQL Server** to execute various queries that extract possible meaningful insights from the dataset.
 
 ### **Key Objectives**  
-- Write **SQL queries** to analyze business performance across various contexts (dimensions).  
+- Write **SQL queries** to analyze business performance and answer business questions across various contexts (dimensions).  
 - Explore the use of **Specific Datetime functions, Joins, Common Table Expressions (CTEs), Aggregations and Window Functions**.  
 - Deliver well-structured, formatted data that can be leveraged by other departments for dashboard development and decision-making.
 
